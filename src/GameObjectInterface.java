@@ -106,6 +106,15 @@ public interface GameObjectInterface extends Remote {
      * @throws Remote Exception
      */
     public String reject(String challenger, String challengee) throws RemoteException;
+
+    /**
+     * Sends a messages teaching the player how to play R-P-S
+     * @param player is the name of the player that needs to be taught
+     * @return MEssage showing success
+     * @throws Remote Exception
+     */
+    public String teach(String player) throws RemoteException;
+
      /**
      * Leaves the game.
      * @param name Name of the player to leave

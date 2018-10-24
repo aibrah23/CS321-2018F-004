@@ -365,7 +365,15 @@ public class GameCore implements GameCoreInterface {
 
 
 
-    }	
+    }
+
+    @Override
+    public String teach(String player){
+        String message = "Here is the Heirarchy of power in R-P-S:\n\tRock beats Scissors\n\tScissors beats Paper\n\tPaper beats Rock\n\nCHALLENGE <name>: \tIf you challenge someone, you must wait for them to accept or reject\nACCEPT/REJECT <name>: \tIf you have been challenge, you must accept or reject the challenge\nYou may not be challenged while in a R-P-S battle\n";
+        return message;
+    }
+
+
      /**
      * Leaves the game.
      * @param name Name of the player to leave

@@ -165,6 +165,16 @@ public class GameObject extends UnicastRemoteObject implements GameObjectInterfa
 	    return core.reject(challenger, challengee);
     }
 
+    /**
+     * Sends a message to the play to teach them how to play R-P-S
+     * @param challenger is the name of the player who wants to be taught
+     * @return Messaging showing success
+     * @throws RemoteException
+     */
+    public String teach(String player) throws RemoteException{
+        return core.teach(player);
+    }
+
      /**
      * Leaves the game.
      * @param name Name of the player to leave
