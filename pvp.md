@@ -14,7 +14,7 @@ One important note is that when you want to challenge someone to a rock, paper, 
 ![RPS Screenshot2](VyannScreenshot2.png)
 
 #### As a Developers:
-When the sure enter the command "challenge", "accept", "reject", or "pick", the following methods in GameObject are being call on the client's side:
+When the user enter the command "challenge", "accept", "reject", or "pick", the following methods in GameObject are being call on the client's side:
 * public String challenge(String challenger, String challengee)
 * public String accept(String challenger, String challengee)
 * public String reject(String challenger, String challengee)
