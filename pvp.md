@@ -1,7 +1,7 @@
 # PvP Rock Paper Scissors Battles
 
 ### Playing R-P-S:
-#### As a Users:
+#### As a User:
 After users have enter into a game, users can see a list of commands. To play rock, paper, scissors with someone, use the commands listed here:
 * Challenge <enter_player_name>
 * Accept <enter_player_name>
@@ -13,7 +13,7 @@ One important note is that when you want to challenge someone to a rock, paper, 
 ![RPS Screenshot1](VyannScreenshot1.png)
 ![RPS Screenshot2](VyannScreenshot2.png)
 
-#### As a Developers:
+#### As a Developer:
 When the user enter the command "challenge", "accept", "reject", or "pick", the following methods in GameObject are being call on the client's side:
 * public String challenge(String challenger, String challengee)
 * public String accept(String challenger, String challengee)
