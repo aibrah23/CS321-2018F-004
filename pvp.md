@@ -1,6 +1,6 @@
 # PvP Rock Paper Scissors Battles
 
-### Playing R-P-S (Vyann):
+### Playing R-P-S - Vyann:
 #### As a User:
 After users have enter into a game, users can see a list of commands. To play rock, paper, scissors with someone, use the commands listed here:
 * Challenge <enter_player_name>
@@ -27,7 +27,7 @@ These methods will then go to the server side in GameCore. The functionality of 
 If any of the above applies, return a message telling why users are not able to challenge someone to a R-P-S. Otherwise, returns a message saying that someone has challenged them to a R-P-S battle, accepted their challenge or rejected their challenge. 
 As for the "pick" method, it checks what input the user enter. If the input is not rock, paper, scissors, return a message saying it is an invalid option. If it is a valid option, it will then compare the challenger's option to the opponent's option. Then it will compare the option and return a message to both users saying who won.
 
-### Ranking System:
+### Ranking System - Ahmed:
 #### For Users:
 Each player in the game will be given a ranking based on their R-P-S battles. The rankings will be determined based on their users R-P-S score. You will be able to see the top 10 players in the world and their respective rankings as well as your own. Each player will be given a title based on their ranking. The players will be allowed to receive a list of all the other players in the world along with their respective title and rankings. The list of commands that will trigger the activation of the top 10 ranking and the list of all the players are:
 * top10
@@ -41,7 +41,7 @@ Player ranking will continuously update after every R-P-S battle to ensure accur
 #### For Developers:
 The commands "top10", "rank", and "listAllPlayers" will come from the GameObject file in their respective methods. The methods will relay the information about the players to the GameCore file that will produce the information about the players to the GameCore file that will produce the information the player is asking. The calculation for each players R-P-S score will use the following formula: **(win/(1+loss) x totalGames)**. The results of every R-P-S will be stored in a log file in order to calculate players R-P-S scores. This way to ensure someone who only played and won a single game of R-P-S doesn't receive the first place title against someone who has played and won more games. The rankings of the top 10 will be shown even if the users are offline. 
 
-### Items, Player Inventory(Using R-P-S)
+### Items, Player Inventory(Using R-P-S) - Hannah
 #### For Users:
 Challenges are items that can be used to start a R-P-S battle. Players can have up to 10 challenges at a time. 1 challenge is restored automatically every five minutes. Challenges will only be deducted from the player's inventory if the challengee accepts the challenge. When a player enters the command "inventory" the following will be shown:
 
