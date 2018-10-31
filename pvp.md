@@ -1,7 +1,7 @@
-#PvP Rock Paper Scissors Battles
+# PvP Rock Paper Scissors Battles
 
-###Playing R-P-S:
-####As a Users:
+### Playing R-P-S:
+#### As a Users:
 After users have enter into a game, users can see a list of commands. To play rock, paper, scissors with someone, use the commands listed her:
 * Challenge <enter_player_name>
 * Accept <enter_player_name>
