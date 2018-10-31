@@ -12,7 +12,7 @@ One important note is that when you want to challenge someone to a rock, paper, 
 ![RPS Screenshot1](VyannScreenshot1.png)
 ![RPS Screenshot2](VyannScreenshot2.png)
 
-####As a Developers:
+#### As a Developers:
 When the suer enter the command "challenge", "accept", "reject", or "pick", the following methods in GameObject are being call on the client's side:
 * public String challenge(String challenger, String challengee)
 * public String accept(String challenger, String challengee)
@@ -25,4 +25,15 @@ These methods will then go to the server side in GameCore. The functionality of 
 If any of the above applies, return a message telling why users are not able to challenge someone to a R-P-S. Otherwise, returns a message saying that someone has challenged them to a R-P-S battle, accepted their challenge or rejected their challenge. 
 As for the "pick" method, it checks what input the user enter. If the input is not rock, paper, scissors, return a message saying it is an invalid option. If it is a valid option, it will then compare the challenger's option to the opponent's option. Then it will compare the option and return a message to btoh users saying who won.
 
+### Ranking System:
+#### For Users:
+Each player in the game will be given a ranking based on their R-P-S battles. The rankings will be determined based on their users R-P-S score. You will be able to see the top 10 players in the world and their respective rankins as well as your own. Each player will be given a title based on their ranking. The players will be allowed to receive a list of all the other players in the world along with their respective title and rankings. The list of commands that will trigger the activation of the top 10 ranking and the list of all the players are:
+* top10
+* rank <player_name>
+* listAllPlayers
 
+Player ranking will continously update after every R-P-S battle to ensure accuracy in their respective ranking and title. All players who aren't in the top 10 will have the title of "Casual", the list of the top 10 titles are the following:
+![RPS Screenshot3](AhmedScreenshot1.png)
+
+#### For Developers:
+The commands "top10", "rank", and "listAllPlayers" will come from the GameObject file in their respective methods. The methods will relay the information about the players to the GameCore file that will produce the information about the players to the GameCore file that will produce the information the player is asking. The calculation for each players R-P-S score will use the following formula: **(win/(1+loss) x totalGames)**. The results of every R-P-S will be stored in a log file in order to calculate players R-P-S scores. This way to ensure someone who only played and won a single game of R-P-S doesn't receive the first place title against someone who has played and won more games. The rankings of the top 10 will be shown even if the users are offline. 
