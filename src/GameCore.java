@@ -1240,12 +1240,14 @@ public class GameCore implements GameCoreInterface {
         player.setOption(option);
         opponent.setChallengerOption(option);
         String winner = "";
-
+        
         if(opponent.getOption().equals("ROCK") || opponent.getOption().equals("PAPER") || opponent.getOption().equals("SCISSORS")){
           player.setRounds(player.getRounds() - 1);
           opponent.setRounds(opponent.getRounds()-1);
           switch(player.getOption()) {
+            //if player picks rock
             case "ROCK":
+	      //if opponent picked paper
               player.getReplyWriter().println("You chose ROCK.");
               if (opponent.getOption().equals("PAPER")) {
                 opponent.getReplyWriter().println("You chose PAPER.");
@@ -1257,6 +1259,7 @@ public class GameCore implements GameCoreInterface {
 		        rpsLog(player.getName(), opponent.getName(), "wins", player.getOption(), opponent.getOption());
       		  		
 		      }		      
+	      //if opponent picked rock
               else if (opponent.getOption().equals("ROCK")){
                 opponent.getReplyWriter().println("You chose ROCK.");
                 player.getReplyWriter().println(opponent.getName() + " chose ROCK: It is a tie.");
@@ -1266,6 +1269,7 @@ public class GameCore implements GameCoreInterface {
 		rpsLog(player.getName(), opponent.getName(), "ties", player.getOption(), opponent.getOption());
               	
 	      }
+	      //if opponent picked scissors
               else {
                 opponent.getReplyWriter().println("You chose SCISSORS.");
                 player.getReplyWriter().println(opponent.getName() + " chose SCISSORS: You win.");
@@ -1276,6 +1280,7 @@ public class GameCore implements GameCoreInterface {
 		rpsLog(opponent.getName(), player.getName(), "wins", opponent.getOption(), player.getOption());
               	
               }
+	      //if game isn't over yet, move to next round
               if(player.getRounds() > 0){
                 player.setOption("");
                 opponent.setOption("");
@@ -1283,6 +1288,7 @@ public class GameCore implements GameCoreInterface {
                 player.getReplyWriter().println("You are entering the next round with a score of " + player.getWins() + " to " + opponent.getWins() + "\nPick rock, paper, or scissors: ");
                 //player.setRounds(player.getRounds() - 1);
               }
+	      //if game is over
               else{
 
                 int p1Win = player.getWins();
@@ -1313,7 +1319,9 @@ public class GameCore implements GameCoreInterface {
                 opponent.setWins(0);
               }
               break;
+	    //if player picked paper
             case "PAPER":
+	      //if opponent picked scissors
               player.getReplyWriter().println("You chose PAPER.");
               if (opponent.getOption().equals("SCISSORS")) {
                 opponent.getReplyWriter().println("You chose SCISSORS.");
@@ -1325,6 +1333,7 @@ public class GameCore implements GameCoreInterface {
 		rpsLog(opponent.getName(), player.getName(), "wins", opponent.getOption(), player.getOption());
               	
 	      }
+	      //if opponent picked paper
               else if (opponent.getOption().equals("PAPER")){
                 opponent.getReplyWriter().println("You chose PAPER.");
                 player.getReplyWriter().println(opponent.getName() + " chose PAPER: It is a tie.");
@@ -1334,6 +1343,7 @@ public class GameCore implements GameCoreInterface {
 		rpsLog(player.getName(), opponent.getName(), "ties", player.getOption(), opponent.getOption());
               
 	      }
+	      //if opponent picked rock
               else {
                 opponent.getReplyWriter().println("You chose ROCK.");
                 player.getReplyWriter().println(opponent.getName() + " chose ROCK: You win.");
@@ -1344,6 +1354,7 @@ public class GameCore implements GameCoreInterface {
 		rpsLog(player.getName(), opponent.getName(), "wins", player.getOption(), opponent.getOption());
               	
               }
+	      //if game isn't over
               if(player.getRounds() > 0){
 
                 player.setOption("");
@@ -1352,6 +1363,7 @@ public class GameCore implements GameCoreInterface {
                 player.getReplyWriter().println("You are entering the next round with a score of " + player.getWins() + " to " + opponent.getWins() + "\nPick rock, paper, or scissors: ");
                 //player.setRounds(player.getRounds() - 1);
               }
+              //if game is over
               else{
 
                 int p1Win = player.getWins();
@@ -1382,7 +1394,9 @@ public class GameCore implements GameCoreInterface {
                 opponent.setWins(0);
               }
               break;
+	    //if player picked scissors
             case "SCISSORS":
+	      //if opponent picked rock
               player.getReplyWriter().println("You chose SCISSORS.");
               if (opponent.getOption().equals("ROCK")) {
                 opponent.getReplyWriter().println("You chose ROCK.");
@@ -1394,6 +1408,7 @@ public class GameCore implements GameCoreInterface {
 		rpsLog(opponent.getName(), player.getName(), "wins", opponent.getOption(), player.getOption());
               	
 	      }
+	      //if opponent picked scissors
               else if (opponent.getOption().equals("SCISSORS")){
                 opponent.getReplyWriter().println("You chose SCISSORS.");
                 player.getReplyWriter().println(opponent.getName() + " chose SCISSORS: It is a tie.");
@@ -1403,6 +1418,7 @@ public class GameCore implements GameCoreInterface {
 		rpsLog(opponent.getName(), player.getName(), "ties", opponent.getOption(), player.getOption());
            
 	      }
+	      //of opponent picked paper
               else {
                 opponent.getReplyWriter().println("You chose PAPER.");
                 player.getReplyWriter().println(opponent.getName() + " chose PAPER: You win.");
@@ -1413,6 +1429,7 @@ public class GameCore implements GameCoreInterface {
 		rpsLog(player.getName(), opponent.getName(), "wins", player.getOption(), opponent.getOption());
               	
               }
+	      //if game isn't over
               if(player.getRounds() > 0){
 
                 player.setOption("");
@@ -1421,6 +1438,7 @@ public class GameCore implements GameCoreInterface {
                 player.getReplyWriter().println("You are entering the next round with a score of " + player.getWins() + " to " + opponent.getWins() + "\nPick rock, paper, or scissors: ");
                 //player.setRounds(player.getRounds() - 1);
               }
+	      //if game is over
               else{
 
                 int p1Win = player.getWins();
